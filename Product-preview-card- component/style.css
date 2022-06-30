@@ -27,17 +27,21 @@ body {
 /*************************** HERE I MADE IMG  ***************************/
 
 .container {
-  width: 800px;
-  height: 550px;
+  width: 700px;
+  height: 500px;
   position: relative;
   border-radius: 20px;
 }
 
-.container-img {
+.desktop-img {
   position: absolute;
   width: 50%;
   height: 100%;
   border-radius: 10px 0px 0px 10px;
+}
+
+.mobile-img {
+  display: none;
 }
 
 /*************************** HERE I MADE RIGHT-SIDE ***************************/
@@ -83,10 +87,10 @@ body {
   display: flex;
   align-items: center;
   font-family: "Fraunces", serif;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
-.price-box h1 {
+.price-box h2 {
   margin-right: 20px;
   font-size: 40px;
   color: var(--Dark-cyan);
@@ -128,24 +132,51 @@ body {
 
 /*************************** RESPONSIVE ***************************/
 
-@media (max-width: 375px) {
+@media screen and (max-width: 600px) {
   body {
     padding: 30px;
   }
   .container {
-    width: 100%;
-    height: 100%;
+    height: 90vh;
   }
-  .container-img {
+  .desktop-img {
+    display: none;
+  }
+
+  .mobile-img {
     width: 100%;
-    height: 50%;
+    height: 30vh;
     border-radius: 10px 10px 0px 0px;
+    display: block;
+    position: absolute;
   }
+
   .description {
-    top: 50%;
+    top: 30%;
     left: 0;
     width: 100%;
-    height: 90%;
+    height: 60vh;
     border-radius: 0px 0px 10px 10px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .title {
+    font-size: 25px;
+  }
+
+  .container {
+    height: 90vh;
+  }
+
+  .mobile-img {
+    width: 100%;
+    height: 20vh;
+  }
+
+  .description {
+    top: 20vh;
+    width: 100%;
+    height: 70vh;
   }
 }
