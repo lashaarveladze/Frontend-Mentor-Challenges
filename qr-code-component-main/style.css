@@ -1,0 +1,58 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --Grayish-blue: hsl(220, 15%, 55%);
+  --Dark-blue: hsl(218, 44%, 22%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-size: 15px;
+  font-family: "Outfit", sans-serif;
+  background-color: var(--light-gray);
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/************************************ CREATING BOX  ************************************/
+
+.container {
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 15px;
+  width: 80%;
+  max-width: 350px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--Dark-blue);
+  font-weight: 700;
+}
+
+.desc {
+  text-align: center;
+  font-weight: 400;
+  color: var(--Grayish-blue);
+}
