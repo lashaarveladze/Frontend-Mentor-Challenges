@@ -1,0 +1,177 @@
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+/******************************************* SOME BASIC STYLING *******************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--Pale-blue);
+}
+
+.desktop-background {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.mobile-background {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/******************************************* CREATING BOX *******************************************/
+
+.container {
+  width: 90%;
+  height: 90%;
+  background-color: white;
+  border-radius: 20px;
+  max-width: 450px;
+  max-height: 650px;
+}
+
+.img {
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+  margin-bottom: 30px;
+}
+
+.text-content h1 {
+  color: var(--Dark-blue);
+  text-align: center;
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+.desc {
+  text-align: center;
+  color: var(--Desaturated-blue);
+  line-height: 25px;
+  padding: 0px 35px;
+  margin-bottom: 20px;
+}
+
+.plan {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--Very-pale-blue);
+  margin: 0 auto;
+  padding: 15px;
+  width: 90%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.price h2,
+h3 {
+  font-size: 15px;
+}
+
+.price h2 {
+  color: var(--Dark-blue);
+  font-weight: 900;
+}
+.price h3 {
+  color: var(--Desaturated-blue);
+}
+
+.plan a {
+  color: var(--Bright-blue);
+  font-weight: 700;
+}
+
+.plan a:hover {
+  color: #766cf1;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 90%;
+  padding: 15px 30px;
+  border: none;
+  background-color: var(--Bright-blue);
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  background-color: #766cf1;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.order p {
+  font-size: 15px;
+  color: var(--Desaturated-blue);
+  font-weight: 900;
+}
+
+.order p:hover {
+  color: var(--Dark-blue);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/******************************************* MADE RESPONSIVE *******************************************/
+
+@media screen and (min-width: 1000px) {
+  .desc {
+    margin: 0 25px 20px 25px;
+  }
+
+  .plan {
+    width: 70%;
+  }
+
+  .btn {
+    width: 70%;
+  }
+
+  .mobile-background {
+    display: none;
+  }
+
+  .desktop-background {
+    display: block;
+  }
+}
